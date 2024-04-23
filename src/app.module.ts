@@ -11,7 +11,7 @@ const routes = [
     path: '/api',
     children: [
       {
-        path: '/auth',
+        path: '',
         module: AuthModule,
       },
       {
@@ -25,6 +25,6 @@ const routes = [
 @Module({
   imports: [AuthModule, UsersModule, RouterModule.register(routes)],
   controllers: [AppController],
-  providers: [AppService, PrismaService],
+  providers: [AppService],
 })
 export class AppModule {}
